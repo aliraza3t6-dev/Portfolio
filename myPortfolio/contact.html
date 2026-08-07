@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Aliraza</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="assets/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['Fira Code', 'monospace'] },
+                    colors: {
+                        bgMain: '#0d1117', bgCard: '#161b22', borderSubtle: '#30363d',
+                        textMain: '#c9d1d9', textMuted: '#8b949e',
+                        accent: '#58a6ff', secondary: '#bc8cff', success: '#238636'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="mesh-bg"></div>
+    <div class="grid-overlay"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="portfolio.html" class="font-mono font-bold text-white text-xl tracking-tighter">
+                &lt;<span class="grad-text">ALIRAZA</span>/&gt;
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-xs font-mono">
+                <a href="portfolio.html" class="nav-link">/HOME</a>
+                <a href="projects.html" class="nav-link">/PROJECTS</a>
+                <a href="skills.html" class="nav-link">/SKILLS</a>
+                <a href="contact.html" class="nav-link nav-cta">CONTACT</a>
+            </nav>
+            <button id="nav-toggle" class="md:hidden text-white text-2xl" aria-label="Menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        <div id="nav-menu" class="mobile-menu">
+            <a href="portfolio.html">/HOME</a>
+            <a href="projects.html">/PROJECTS</a>
+            <a href="skills.html">/SKILLS</a>
+            <a href="contact.html">/CONTACT</a>
+        </div>
+    </header>
+
+    <!-- ================= PAGE HEADER ================= -->
+    <section class="max-w-6xl mx-auto px-6 pt-40 pb-14">
+        <p class="section-tag mb-2" data-reveal><i class="ph ph-paper-plane-tilt mr-2"></i>Contact</p>
+        <h1 class="section-title" data-reveal>Let's work <span class="grad-text">together</span></h1>
+        <p class="mt-4 text-textMuted max-w-2xl text-sm md:text-base leading-relaxed" data-reveal data-reveal-delay="1">
+            Have a project, an opportunity, or just want to say hi? My inbox is always open — I'll get back to you as soon as I can.
+        </p>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="max-w-6xl mx-auto px-6 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-5 glass rounded-2xl p-8 card-hover" data-reveal>
+                <h3 class="text-white font-bold text-base mb-6">Get in touch</h3>
+                <div class="flex flex-col gap-4 text-xs font-mono text-textMuted mb-8">
+                    <div class="flex items-center gap-3"><i class="ph ph-map-pin text-accent text-base"></i> <span>Kota, Rajasthan, India</span></div>
+                    <div class="flex items-center gap-3"><i class="ph ph-envelope-simple text-accent text-base"></i> <a href="mailto:youremail@example.com" class="hover:text-white hover:underline truncate">youremail@example.com</a></div>
+                    <div class="flex items-center gap-3"><i class="ph ph-phone text-accent text-base"></i> <span>+91 98765 43210</span></div>
+                    <div class="flex items-center gap-3"><i class="ph ph-github-logo text-accent text-base"></i> <a href="https://github.com/aliraza3t6-dev" target="_blank" class="hover:text-white hover:underline truncate">github.com/aliraza3t6-dev</a></div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="https://github.com/aliraza3t6-dev" target="_blank" class="social-link"><i class="ph ph-github-logo"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-link"><i class="ph ph-linkedin-logo"></i></a>
+                    <a href="mailto:youremail@example.com" class="social-link"><i class="ph ph-envelope-simple"></i></a>
+                </div>
+            </div>
+
+            <form id="contact-form" class="md:col-span-7 glass rounded-2xl p-8" data-reveal data-reveal-delay="1">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label for="cf-name" class="block text-xs font-mono text-textMuted mb-2">Your Name</label>
+                        <input id="cf-name" type="text" required class="input" placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label for="cf-email" class="block text-xs font-mono text-textMuted mb-2">Your Email</label>
+                        <input id="cf-email" type="email" required class="input" placeholder="john@example.com">
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <label for="cf-message" class="block text-xs font-mono text-textMuted mb-2">Message</label>
+                    <textarea id="cf-message" required class="input" placeholder="Tell me about your project or opportunity..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-solid mt-6 w-full">
+                    <i class="ph ph-paper-plane-tilt text-lg"></i> Send Message
+                </button>
+                <p id="form-status" class="mt-4 text-xs font-mono text-success"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="max-w-6xl mx-auto px-6 py-14 border-t border-borderSubtle mt-10">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <a href="portfolio.html" class="font-mono font-bold text-white text-lg tracking-tighter">
+                &lt;<span class="grad-text">ALIRAZA</span>/&gt;
+            </a>
+            <div class="flex items-center gap-3">
+                <a href="https://github.com/aliraza3t6-dev" target="_blank" class="social-link"><i class="ph ph-github-logo"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="social-link"><i class="ph ph-linkedin-logo"></i></a>
+                <a href="mailto:youremail@example.com" class="social-link"><i class="ph ph-envelope-simple"></i></a>
+            </div>
+            <p class="text-xs font-mono text-textMuted">© 2025 Aliraza · Crafted with <i class="ph ph-heart-fill text-accent"></i></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Aliraza</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="assets/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['Fira Code', 'monospace'] },
+                    colors: {
+                        bgMain: '#0d1117', bgCard: '#161b22', borderSubtle: '#30363d',
+                        textMain: '#c9d1d9', textMuted: '#8b949e',
+                        accent: '#58a6ff', secondary: '#bc8cff', success: '#238636'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="mesh-bg"></div>
+    <div class="grid-overlay"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="portfolio.html" class="font-mono font-bold text-white text-xl tracking-tighter">
+                &lt;<span class="grad-text">ALIRAZA</span>/&gt;
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-xs font-mono">
+                <a href="portfolio.html" class="nav-link">/HOME</a>
+                <a href="projects.html" class="nav-link">/PROJECTS</a>
+                <a href="skills.html" class="nav-link">/SKILLS</a>
+                <a href="contact.html" class="nav-link nav-cta">CONTACT</a>
+            </nav>
+            <button id="nav-toggle" class="md:hidden text-white text-2xl" aria-label="Menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        <div id="nav-menu" class="mobile-menu">
+            <a href="portfolio.html">/HOME</a>
+            <a href="projects.html">/PROJECTS</a>
+            <a href="skills.html">/SKILLS</a>
+            <a href="contact.html">/CONTACT</a>
+        </div>
+    </header>
+
+    <!-- ================= PAGE HEADER ================= -->
+    <section class="max-w-6xl mx-auto px-6 pt-40 pb-14">
+        <p class="section-tag mb-2" data-reveal><i class="ph ph-cpu mr-2"></i>Skills</p>
+        <h1 class="section-title" data-reveal>Technical <span class="grad-text">Competencies</span></h1>
+        <p class="mt-4 text-textMuted max-w-2xl text-sm md:text-base leading-relaxed" data-reveal data-reveal-delay="1">
+            The tools and technologies I use daily to build reliable, real-time and scalable applications.
+        </p>
+    </section>
+
+    <!-- ================= SKILL BARS ================= -->
+    <section class="max-w-6xl mx-auto px-6 pb-20">
+        <div class="glass rounded-2xl p-8 md:p-10" data-reveal>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-7">
+                <div>
+                    <div class="flex justify-between text-xs font-mono mb-1.5">
+                        <span class="text-white font-medium">Python / Django</span>
+                        <span class="text-accent">95%</span>
+                    </div>
+                    <div class="skill-track"><div class="skill-fill" data-width="95"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-xs font-mono mb-1.5">
+                        <span class="text-white font-medium">JavaScript / TypeScript</span>
+                        <span class="text-accent">90%</span>
+                    </div>
+                    <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-xs font-mono mb-1.5">
+                        <span class="text-white font-medium">WebSockets</span>
+                        <span class="text-accent">88%</span>
+                    </div>
+                    <div class="skill-track"><div class="skill-fill" data-width="88"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-xs font-mono mb-1.5">
+                        <span class="text-white font-medium">Python + Tkinter</span>
+                        <span class="text-accent">90%</span>
+                    </div>
+                    <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-xs font-mono mb-1.5">
+                        <span class="text-white font-medium">React.js / Next.js</span>
+                        <span class="text-accent">85%</span>
+                    </div>
+                    <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-xs font-mono mb-1.5">
+                        <span class="text-white font-medium">Node.js / Express</span>
+                        <span class="text-accent">80%</span>
+                    </div>
+                    <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-xs font-mono mb-1.5">
+                        <span class="text-white font-medium">SQL &amp; NoSQL</span>
+                        <span class="text-accent">82%</span>
+                    </div>
+                    <div class="skill-track"><div class="skill-fill" data-width="82"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-xs font-mono mb-1.5">
+                        <span class="text-white font-medium">Tailwind CSS</span>
+                        <span class="text-accent">90%</span>
+                    </div>
+                    <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TOOLCHIP GRID ================= -->
+    <section class="max-w-6xl mx-auto px-6 pb-20">
+        <div class="mb-8" data-reveal>
+            <h2 class="section-title text-2xl">Also working <span class="grad-text">with</span></h2>
+        </div>
+        <div class="flex flex-wrap gap-3" data-reveal data-reveal-delay="1">
+            <span class="chip chip-accent"><i class="ph ph-check text-sm"></i> Git / GitHub</span>
+            <span class="chip chip-accent"><i class="ph ph-check text-sm"></i> REST APIs</span>
+            <span class="chip chip-accent"><i class="ph ph-check text-sm"></i> Docker</span>
+            <span class="chip chip-accent"><i class="ph ph-check text-sm"></i> PostgreSQL</span>
+            <span class="chip chip-accent"><i class="ph ph-check text-sm"></i> Redis</span>
+            <span class="chip chip-accent"><i class="ph ph-check text-sm"></i> Render / Vercel</span>
+            <span class="chip chip-accent"><i class="ph ph-check text-sm"></i> Responsive Design</span>
+            <span class="chip chip-accent"><i class="ph ph-check text-sm"></i> Figma</span>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="max-w-6xl mx-auto px-6 py-14 border-t border-borderSubtle mt-10">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <a href="portfolio.html" class="font-mono font-bold text-white text-lg tracking-tighter">
+                &lt;<span class="grad-text">ALIRAZA</span>/&gt;
+            </a>
+            <div class="flex items-center gap-3">
+                <a href="https://github.com/aliraza3t6-dev" target="_blank" class="social-link"><i class="ph ph-github-logo"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="social-link"><i class="ph ph-linkedin-logo"></i></a>
+                <a href="mailto:youremail@example.com" class="social-link"><i class="ph ph-envelope-simple"></i></a>
+            </div>
+            <p class="text-xs font-mono text-textMuted">© 2025 Aliraza · Crafted with <i class="ph ph-heart-fill text-accent"></i></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

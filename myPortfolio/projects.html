@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Aliraza</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="assets/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['Fira Code', 'monospace'] },
+                    colors: {
+                        bgMain: '#0d1117', bgCard: '#161b22', borderSubtle: '#30363d',
+                        textMain: '#c9d1d9', textMuted: '#8b949e',
+                        accent: '#58a6ff', secondary: '#bc8cff', success: '#238636'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="mesh-bg"></div>
+    <div class="grid-overlay"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="portfolio.html" class="font-mono font-bold text-white text-xl tracking-tighter">
+                &lt;<span class="grad-text">ALIRAZA</span>/&gt;
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-xs font-mono">
+                <a href="portfolio.html" class="nav-link">/HOME</a>
+                <a href="projects.html" class="nav-link">/PROJECTS</a>
+                <a href="skills.html" class="nav-link">/SKILLS</a>
+                <a href="contact.html" class="nav-link nav-cta">CONTACT</a>
+            </nav>
+            <button id="nav-toggle" class="md:hidden text-white text-2xl" aria-label="Menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        <div id="nav-menu" class="mobile-menu">
+            <a href="portfolio.html">/HOME</a>
+            <a href="projects.html">/PROJECTS</a>
+            <a href="skills.html">/SKILLS</a>
+            <a href="contact.html">/CONTACT</a>
+        </div>
+    </header>
+
+    <!-- ================= PAGE HEADER ================= -->
+    <section class="max-w-6xl mx-auto px-6 pt-40 pb-14">
+        <p class="section-tag mb-2" data-reveal><i class="ph ph-folder-open mr-2"></i>Projects</p>
+        <h1 class="section-title" data-reveal>Things I've <span class="grad-text">built</span></h1>
+        <p class="mt-4 text-textMuted max-w-2xl text-sm md:text-base leading-relaxed" data-reveal data-reveal-delay="1">
+            Production-ready applications focused on real-time communication, clean architecture and real utility. Every project is built end-to-end — from database design to deployment.
+        </p>
+    </section>
+
+    <!-- ================= PROJECTS GRID ================= -->
+    <section class="max-w-6xl mx-auto px-6 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- Chatube -->
+            <div class="glass rounded-2xl p-7 card-hover group" data-reveal>
+                <div class="flex items-center justify-between mb-5">
+                    <div class="w-11 h-11 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent text-xl">
+                        <i class="ph ph-chats-circle"></i>
+                    </div>
+                    <span class="chip chip-success"><i class="ph ph-check-circle text-sm"></i> Live</span>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-1.5">Chatube</h3>
+                <p class="text-xs text-textMuted leading-relaxed mb-5">
+                    A scalable real-time chat application with custom user authentication, built with Python (Django), SQLite, and WebSocket connections for instantaneous message delivery.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="chip chip-accent">Python</span>
+                    <span class="chip chip-accent">Django</span>
+                    <span class="chip chip-accent">SQLite</span>
+                    <span class="chip chip-accent">WebSockets</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="https://chatube-u2ev.onrender.com" target="_blank" class="btn btn-solid btn-sm">
+                        <i class="ph ph-play-circle text-sm"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/aliraza3t6-dev/chatube" target="_blank" class="btn btn-glass btn-sm">
+                        <i class="ph ph-github-logo text-sm"></i> Code
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quizy -->
+            <div class="glass rounded-2xl p-7 card-hover group" data-reveal data-reveal-delay="1">
+                <div class="flex items-center justify-between mb-5">
+                    <div class="w-11 h-11 rounded-xl bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary text-xl">
+                        <i class="ph ph-puzzle-piece"></i>
+                    </div>
+                    <span class="chip"><i class="ph ph-star text-sm"></i> Featured</span>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-1.5">Quizy</h3>
+                <p class="text-xs text-textMuted leading-relaxed mb-5">
+                    An interactive assessment engine in core Python + Tkinter supporting MCQ, Fill-in-the-Blank and True/False formats with real-time ability checking.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="chip chip-accent">Python</span>
+                    <span class="chip chip-accent">Tkinter</span>
+                    <span class="chip chip-accent">MCQ</span>
+                    <span class="chip chip-accent">Real-time</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="https://github.com/aliraza3t6-dev/quizy/tree/main/quiz_app" target="_blank" class="btn btn-solid btn-sm">
+                        <i class="ph ph-github-logo text-sm"></i> View Code
+                    </a>
+                    <a href="https://github.com/aliraza3t6-dev" target="_blank" class="btn btn-glass btn-sm">
+                        <i class="ph ph-arrow-square-out text-sm"></i> GitHub
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="max-w-6xl mx-auto px-6 py-14 border-t border-borderSubtle mt-10">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <a href="portfolio.html" class="font-mono font-bold text-white text-lg tracking-tighter">
+                &lt;<span class="grad-text">ALIRAZA</span>/&gt;
+            </a>
+            <div class="flex items-center gap-3">
+                <a href="https://github.com/aliraza3t6-dev" target="_blank" class="social-link"><i class="ph ph-github-logo"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="social-link"><i class="ph ph-linkedin-logo"></i></a>
+                <a href="mailto:youremail@example.com" class="social-link"><i class="ph ph-envelope-simple"></i></a>
+            </div>
+            <p class="text-xs font-mono text-textMuted">© 2025 Aliraza · Crafted with <i class="ph ph-heart-fill text-accent"></i></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
